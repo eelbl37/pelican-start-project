@@ -14,7 +14,7 @@ SITESUBTITLE = 'Leer wat programmeren'
 BROWSER_COLOR = '#333333'
 PATH = "content"
 
-THEME = 'themes/vinden'
+THEME = 'themes/mijntheme'
 
 TIMEZONE = 'Europe/Amsterdam'
 
@@ -53,7 +53,7 @@ MENUITEMS = (
 
 STATIC_PATHS =  ['static' ]
 CUSTOM_CSS = 'static/custom.css' # in de document dir
-USE_LESS = True
+#USE_LESS = True
 
 
 LINKS = (
