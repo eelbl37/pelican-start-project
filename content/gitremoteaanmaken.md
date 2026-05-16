@@ -31,13 +31,13 @@ Om lange namen te voorkomen maak je eenmalig per project een remote aan.
 
 Ga naar je project en typ.
 
-git remote -v  # geeft de aanwezige remotes  
+    git remote -v  # geeft de aanwezige remotes  
 
-git remote add origin git@github.com:eelbl37/pelican-start-project.git
+    git remote add origin git@github.com:eelbl37/pelican-start-project.git
 
-git remote remove  'hier de remote naam zonder''  '
+    git remote remove  'hier de remote naam zonder''  '
 
 
 # Uploaden naar github
 
-git push origin
+    git push origin
