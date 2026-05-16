@@ -1,4 +1,4 @@
-Title: git uploaden naar github
+Title: git remote aanmaken
 Date: 2026-05-16
 Author: Einte Elsinga
 Modified: 2026-05-16
@@ -31,8 +31,13 @@ Om lange namen te voorkomen maak je eenmalig per project een remote aan.
 
 Ga naar je project en typ.
 
-git remote -v  # geen de aanwezige remote projecten.
+git remote -v  # geeft de aanwezige remotes  
 
 git remote add origin git@github.com:eelbl37/pelican-start-project.git
 
+git remote remove  'hier de remote naam zonder''  '
 
+
+# Uploaden naar github
+
+git push origin
