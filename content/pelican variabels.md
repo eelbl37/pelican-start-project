@@ -8,7 +8,7 @@ Summary: Begin van een index.html. Variabels in pelican
 Status: Published
 
 
-# Variabels
+## Variabels
 
 Deep dive
 
@@ -18,7 +18,7 @@ Pelican's documentation on themes says
 
 THEME_STATIC_DIR = 'theme'
 
-Destination directory in the output path where Pelican will place the files collected from THEMESTATICPATHS. Default is theme.
+Destination directory in the output path where Pelican will place the files collected from THEMESTATICPATHS. Default is het leeg.
 
 the variable THEME_STATIC_PATHS is by default static, which is why we created that directory inside the theme.
 
@@ -26,7 +26,7 @@ As you can see all these paths are configurable, should you prefer different nam
 
 
 
-# Pelican variabels
+## Pelican variabels
 
 As I mentioned, we are currently overriding Pelican's output with a static template. What we want to do is to inject values known to Pelican into the template itself, be those static variables or more dynamic items like articles, tags, and images.
 
@@ -35,7 +35,7 @@ To do this, Pelican uses Jinja, a widely adopted template engine written in Pyth
 We actually already used Pelican's variables and Jinja templates when we prefixed links with {{ SITEURL }}. Aside from that, however, the first and simplest variable injection for our template are title and subtitle.
 
 
-# Title
+## Title
 
 The Pelican variable we are interested in is SITENAME, which has been initialised by the quickstart script as you can see in the configuration file
 
@@ -46,9 +46,9 @@ The Pelican variable we are interested in is SITENAME, which has been initialise
 ```
 
 
-We need to replace the static text with this variable three times: in the tag &lt;title&gt;, in the navigation bar and in the header at the top of the sidebar.
+We need to replace the static text with this variable three times: in the tag title, in the navigation bar and in the header at the top of the sidebar.
 
-# index.html title
+## index.html title
 
 <html>
   <head>
@@ -83,19 +83,19 @@ We need to replace the static text with this variable three times: in the tag &l
           </header>
         </section>
 
-# subtitle
+## subtitle
 
 Pelican provides support even for the subtitle, but that wasn't filled in by the setup script for us, so we need to create the variable in the configuration file
 
-    ```
+    
     pelicanconf.py
 
     SITENAME = "The Analog Fox"
     SITESUBTITLE = "A great blog about old stuff"
-    ```
+  
 
 
-# index.html
+## index.html
 
         <section id="intro">
           <a href="#" class="logo"><img src="{{ SITEURL }}/theme/images/logo.jpg" alt="" /></a>
@@ -111,20 +111,20 @@ Marvellous! Now the page should show the title of the blog in the window header,
 
 OK, I might be a bit overexcited, but I love when plans come together ;)
 
-# Gebruik pelicanconf.py
+## Gebruik pelicanconf.py
 
 Pelican passes the whole configuration file to the template, together with the parsed content of the site itself, so you are free to use any variable, should you need them, or to introduce new ones (which we will do in the next section).
 
 For now, just to familiarise with the concept, you might try to add TIMEZONE under the subtitle
 
-```
-future-imperfect/templates/index.html
+      
+      future-imperfect/templates/index.html
 
-          <header>
-            <h2>{{ SITENAME }}</h2>
-            <p>{{ SITESUBTITLE }}</p>
-            <p>{{ TIMEZONE }}</p>
-          </header>
-```
+                <header>
+                  <h2>{{ SITENAME }}</h2>
+                  <p>{{ SITESUBTITLE }}</p>
+                  <p>{{ TIMEZONE }}</p>
+                </header>
+      
 
 I don't think this specific change is really useful, but it's good to remember that all those variables are available.

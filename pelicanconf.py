@@ -14,8 +14,8 @@ SITESUBTITLE = 'Leer wat programmeren'
 BROWSER_COLOR = '#333333'
 PATH = "content"
 
-THEME = 'themes/mijntheme'
-
+THEME = 'theme/mijntheme'
+# THEMESTATICPATHS = 'theme'
 TIMEZONE = 'Europe/Amsterdam'
 
 DEFAULT_LANG = 'en'
